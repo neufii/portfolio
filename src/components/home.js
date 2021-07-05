@@ -7,16 +7,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPortrait } from "@fortawesome/free-solid-svg-icons";
 
 const Home = forwardRef((props, ref) => {
-  const variants = {
-    hover: { scale: 1.2 },
-
-    rest: { scale: 1 },
-  };
+  const getRandomDelay = () => -(Math.random() * 0.7 + 0.05);
+  const randomDuration = () => Math.random() * 0.07 + 0.23;
 
   const emojiVariants = {
-    hover: { scale: 1.2 },
+    animate: (i) => ({
+      rotate: i % 2 === 0 ? [-2, 2.3, 0] : [2, -2.4, 0],
+      transition: {
+        delay: getRandomDelay(),
+        repeat: Infinity,
+        duration: randomDuration(),
+      },
+    }),
 
-    rest: { scale: 1 },
+    rest: { rotate: 0 },
   };
 
   return (
@@ -27,15 +31,25 @@ const Home = forwardRef((props, ref) => {
       <img src={cover} className='img-fluid' alt='' />
       <motion.div className='header position-absolute'>
         <h1>
-          Hi <motion.span variants={emojiVariants}>👋</motion.span> <br /> I'm
-          Anon,
+          Hi{" "}
+          <motion.div
+            className='emoji'
+            whileHover='animate'
+            whileTap='animate'
+            animate='rest'
+            variants={emojiVariants}
+          >
+            👋
+          </motion.div>{" "}
+          <br /> I'm Anon,
         </h1>
         <h5>I'm an aspiring software engineer currently living in Bangkok.</h5>
         <a
           href='https://drive.google.com/file/d/1ZQbBLyoe5oq480gHV17l8nwLKvVXRqPE/view'
           target='_blank'
         >
-          <span className="h3">Download Resume</span> <FontAwesomeIcon icon={faPortrait} size='2x' />
+          <span className='h3'>Download Resume</span>{" "}
+          <FontAwesomeIcon icon={faPortrait} size='2x' />
         </a>
       </motion.div>
     </div>

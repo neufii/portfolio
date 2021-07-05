@@ -7,6 +7,10 @@ a:hover{
   text-decoration: underline;
 }
 
+.emoji{
+  display: inline-block;
+}
+
 @media screen and (max-width: 485px) {
   .header {
     visibility: hidden;
