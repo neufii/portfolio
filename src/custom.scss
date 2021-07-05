@@ -1,0 +1,13 @@
+
+$active : #6C757D;
+$deactive: white;
+
+
+
+$theme-colors: (
+  active: $active,
+  deactive: $deactive,
+);
+
+
+@import '~bootstrap/scss/bootstrap.scss';

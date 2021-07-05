@@ -1,0 +1,19 @@
+
+.vertical-timeline::before {
+    background-color: var(--active);
+  }
+  
+  .vertical-timeline-element-icon {
+    background: var(--hover);
+    color: var(--deactive);
+    margin: auto;
+  }
+  
+  .vertical-timeline-element-content {
+    background-color: var(--lighter);
+    color: var(--text);
+  }
+  
+  .vertical-timeline-element-content-arrow {
+    border-right: 7px solid var(--lighter);
+  }

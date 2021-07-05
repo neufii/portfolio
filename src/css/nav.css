@@ -1,0 +1,36 @@
+:root {
+  --active: #6c757d;
+  --hover: #adb5bd;
+  --text: #343a40;
+  --deactive: white;
+}
+
+.navbar {
+  z-index: 4;
+}
+
+.navbar button {
+  text-decoration: none;
+  color: var(--text);
+  border-radius: 0;
+}
+.navbar button:hover {
+  text-decoration: none;
+  border-bottom: 3px solid var(--hover);
+  font-weight: bold;
+  color: var(--text);
+}
+
+.navbar button.active {
+  text-decoration: none;
+  border-bottom: 3px solid var(--active);
+  font-weight: 900;
+}
+
+.fa-btn {
+  color: var(--hover);
+}
+
+.fa-btn:hover {
+  color: var(--text);
+}

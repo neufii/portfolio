@@ -1,0 +1,38 @@
+a, a:hover {
+  text-decoration: none;
+  color: var(--darker);
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 485px) {
+  .header {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .header {
+    top: 15%;
+    left: 8%;
+    max-width: 42%;
+  }
+}
+
+@media screen and (max-width: 1007px) {
+  .header {
+    top: 15%;
+    left: 8%;
+    max-width: 42%;
+  }
+}
+
+@media screen and (min-width: 1008px) {
+  .header {
+    top: 40%;
+    left: 8%;
+    max-width: 42%;
+  }
+}
